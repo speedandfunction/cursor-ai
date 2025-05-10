@@ -14,6 +14,20 @@ When creating or updating a pull request, follow these guidelines:
 2. Run `git --no-pager diff` to compare the current branch with origin default branch
 3. Analyze the changes to understand the purpose and impact
 
+## Pull Request Types
+
+- `fix`: Patches a bug in your codebase (correlates with PATCH in Semantic Versioning)
+- `feat`: Introduces a new feature to the codebase (correlates with MINOR in Semantic Versioning)
+- `BREAKING CHANGE`: Introduces a breaking API change (correlates with MAJOR in Semantic Versioning)
+- Other allowed types: `build:`, `chore:`, `ci:`, `docs:`, `style:`, `refactor:`, `perf:`, `test:`
+
+## Specification Details
+
+1. Title MUST be prefixed with a type, followed by an OPTIONAL scope, OPTIONAL !, and REQUIRED terminal colon and space
+2. The type `feat` MUST be used when adding a new feature
+3. The type `fix` MUST be used when fixing a bug
+4. A scope MAY be provided after a type, surrounded by parenthesis (e.g., `fix(parser):`)
+
 ## Pull Request Format
 - Title: One sentence summary (max 120 characters)
 - Body: 
@@ -23,7 +37,7 @@ When creating or updating a pull request, follow these guidelines:
 
 ## Example:
 ```
-Title: Add user authentication to login page
+feat: Add user authentication to login page
 
 Body:
 - Add password validation function
@@ -39,16 +53,12 @@ When creating a PR, ensure that:
 - All bullet points are written without extra lines between them
 - The body starts directly with bullet points (no introductory text)
 - When using GitHub CLI, use `--body-file` instead of `--body` to avoid escape character issues
-- Always create the PR body file in the `.cursor/tmp/` folder (e.g., `.cursor/tmp/pr-body.md`)
+- Always create the PR body file in the `/tmp/` folder (e.g., `/tmp/pr-body.md`)
 In GitHub or similar platforms, preview the PR description to verify there are no unwanted
 line breaks between bullet points.
 
 ## Process
-1. Analyze changes between master and current branch
+1. Analyze changes between main and current branch
 2. Create PR title and bullet list description
 3. Create new PR or update existing PR tied to current branch
 4. Request review if needed
-5. Remove any temporary files created during the process
-
-## Important
-Always create temporary files in the `.cursor/tmp/` folder and clean them up (like `.cursor/tmp/pr-body.md`) after completing the PR process to avoid cluttering the workspace.
