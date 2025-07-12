@@ -22,7 +22,8 @@ When creating or updating a pull request, follow these guidelines:
 2. **Issue Link in PR Body**: If an issue reference is found, include it in the PR body:
    - Add "**Related Issue**: [#<number>](https://github.com/owner/repo/issues/<number>)" after the bullet list
 3. **Issue Update After PR**: After creating or updating the PR, update the related issue:
-   - Add a comment linking to the PR: "Related PR: [#<pr_number>](https://github.com/owner/repo/pull/<pr_number>)"
+   - Check if the PR link is already mentioned in the issue body
+   - If not mentioned, update the issue body to include the PR link: "Related PR: [#<pr_number>](https://github.com/owner/repo/pull/<pr_number>)"
    - Use appropriate labels if the PR addresses/closes the issue
 
 ## Pull Request Types
@@ -91,7 +92,8 @@ line breaks between bullet points.
 4. Include issue reference in PR body if found
 5. Create new PR or update existing PR tied to current branch
 6. **Post-PR Actions**: If issue reference was found:
-   - Add comment to the issue linking to the PR
+   - Check if the PR link is already mentioned in the issue body
+   - If not mentioned, update the issue body to include the PR link
    - Apply appropriate labels (e.g., "in-progress", "has-pr")
    - Update issue status if appropriate
 7. Request review if needed
