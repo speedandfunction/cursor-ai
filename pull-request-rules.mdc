@@ -57,7 +57,7 @@ Body:
 - Create JWT token generation
 - Add error handling for invalid credentials
 
-**Related Issue**: [#37](https://github.com/ondrata-ai/flow-test/issues/37)
+**Related Issue**: [#37](https://github.com/ondatra-ai/flow-test/issues/37)
 
 This feature is necessary to secure user accounts and prevent unauthorized access to the application.
 ```
